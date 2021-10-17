@@ -41,7 +41,7 @@ const Edit = () => {
       requestOptions
     );
 
-    if (todoResponse.status == 500) {
+    if (todoResponse.status !== 200) {
       setHasError(true);
       return;
     } else history.push(`/`);

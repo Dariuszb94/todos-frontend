@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Submit, Input, DoneToggle, EditForm } from "./editStyle";
 import { StyledLink } from "../globalStyles";
 import { useHistory } from "react-router-dom";
+import { todoUrl } from "../consts";
 const Edit = () => {
   const [todo, setTodo] = useState({});
   const [todoNew, setTodoNew] = useState({});
@@ -36,10 +37,7 @@ const Edit = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(todoNew),
     };
-    const todoResponse = await fetch(
-      `http://localhost:8080/todos/${id}`,
-      requestOptions
-    );
+    const todoResponse = await fetch(todoUrl + id, requestOptions);
 
     if (todoResponse.status !== 200) {
       setHasError(true);
@@ -51,8 +49,8 @@ const Edit = () => {
   }, []);
 
   const getTodo = async () => {
-    const todoResponse = await fetch(`http://localhost:8080/todos/${id}`);
-    if (todoResponse.status == 500) {
+    const todoResponse = await fetch(todoUrl + id);
+    if (todoResponse.status !== 500) {
       setHasError(true);
       return;
     }

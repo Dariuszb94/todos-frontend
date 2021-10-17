@@ -34,3 +34,11 @@ To run this project, download a repo, then go to repo folder and open terminal:
 $ npm install
 $ npm run start
 ```
+
+## Test
+
+To run tests:
+
+```
+$ npm run test
+```

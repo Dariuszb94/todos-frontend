@@ -46,7 +46,7 @@ const Edit = () => {
   };
   useEffect(() => {
     getTodo();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getTodo = async () => {
     const todoResponse = await fetch(todoUrl + id);

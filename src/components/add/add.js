@@ -27,7 +27,7 @@ const Add = () => {
       requestOptions
     );
 
-    if (todoResponse.status == 500) {
+    if (todoResponse.status !== 200) {
       setHasError(true);
       return;
     } else window.location.reload(false);

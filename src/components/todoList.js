@@ -4,6 +4,7 @@ import Reset from "./reset/reset";
 import { NavLink } from "react-router-dom";
 import { Loading, Todo, TodoContainer, Todos, Error } from "./todoListStyle.js";
 import { todoUrl } from "./consts";
+import Header from "./header/header";
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -36,6 +37,7 @@ const TodoList = () => {
 
   return (
     <div>
+      <Header />
       {loading ? <Loading /> : null}
       {hasError ? <Error>An error has occured</Error> : null}
       <Add />

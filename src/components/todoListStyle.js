@@ -36,6 +36,10 @@ export const Todo = styled.form`
 export const TodoContainer = styled.li`
   display: flex;
   justify-content: center;
+  padding: 8px;
+  &:nth-child(even) {
+    background-color: rgb(247, 247, 247);
+  }
 `;
 export const Error = styled.div`
   color: red;

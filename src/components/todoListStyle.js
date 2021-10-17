@@ -70,19 +70,20 @@ export const Error = styled.div`
   margin-bottom: 20px;
 `;
 export const TodoName = styled.div`
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin-right: 8px;
 `;
 export const Delete = styled.input`
   background-color: white;
   box-shadow: 0px 8px 12px rgb(0 0 0 / 10%);
   border: none;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border-radius: 4px;
   padding: 8px;
   outline: none;
   cursor: pointer;
   margin-left: 8px;
+  margin-right: 8px;
   transition: 0.5s box-shadow linear, 0.5s background-color linear;
   &:hover {
     background-color: rgb(247, 247, 247);

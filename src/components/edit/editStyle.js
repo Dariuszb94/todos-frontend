@@ -15,6 +15,7 @@ export const Submit = styled.input`
   outline: none;
   cursor: pointer;
   transition: 0.5s box-shadow linear, 0.5s background-color linear;
+  font-size: 1rem;
   &:hover {
     background-color: rgba(0, 128, 0, 0.85);
     box-shadow: 0px 8px 12px rgb(0 204 0 / 50%);
@@ -27,6 +28,7 @@ export const Input = styled.input`
   outline: none;
   border: none;
   border-radius: 4px;
+  font-size: 1rem;
 `;
 export const DoneToggle = styled.button`
   height: 33px;
@@ -41,10 +43,11 @@ export const DoneToggle = styled.button`
   padding: 8px;
   cursor: pointer;
   transition: 0.5s box-shadow linear, 0.5s background-color linear;
+  font-size: 1rem;
 `;
 export const EditForm = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
 `;

@@ -69,7 +69,7 @@ const Edit = () => {
       >
         <Input type="text" placeholder={todo.name} onChange={setName} />
         <DoneToggle type="button" onClick={setDone} done={todoNew.completed}>
-          DONE
+          Done?
         </DoneToggle>
         <Submit type="submit" value="Send" />
       </EditForm>

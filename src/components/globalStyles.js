@@ -10,11 +10,10 @@ export const StyledLink = styled(NavLink).attrs()`
   padding: 8px;
   outline: none;
   cursor: pointer;
-  margin-left: 8px;
   transition: 0.5s box-shadow linear, 0.5s background-color linear;
   text-decoration: none;
   color: black;
-  font-size: 1.6rem;
+  font-size: 1rem;
   &:hover {
     background-color: rgb(247, 247, 247);
     box-shadow: 0px 8px 12px rgb(0 0 0 / 50%);

@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Add from "./add/add";
 import Reset from "./reset/reset";
-import { NavLink } from "react-router-dom";
-import { Loading, Todo, TodoContainer, Todos, Error } from "./todoListStyle.js";
+import {
+  Loading,
+  Todo,
+  TodoContainer,
+  Todos,
+  Error,
+  TodoName,
+  Delete,
+  StyledLink,
+} from "./todoListStyle.js";
 import { todoUrl } from "./consts";
+import CheckBoxIcon from "@material-ui/icons/CheckBox";
+import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty";
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -46,11 +56,19 @@ const TodoList = () => {
               return (
                 <TodoContainer key={todo.id}>
                   <Todo onSubmit={() => deleteTodo(todo.id)}>
-                    <div>{todo.name}</div>
-                    <div>{todo.completed}</div>
-                    <input type="submit" value="Delete" />
+                    <TodoName>{todo.name}</TodoName>
+                    <picture>
+                      {todo.completed ? (
+                        <CheckBoxIcon />
+                      ) : (
+                        <HourglassEmptyIcon />
+                      )}
+                    </picture>
+                    <Delete type="submit" value="Delete" />
                   </Todo>
-                  <NavLink to={{ pathname: `/edit/${todo.id}` }}>Edit</NavLink>
+                  <StyledLink to={{ pathname: `/edit/${todo.id}` }}>
+                    Edit
+                  </StyledLink>
                 </TodoContainer>
               );
             })

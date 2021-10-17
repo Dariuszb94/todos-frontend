@@ -50,7 +50,7 @@ const Edit = () => {
 
   const getTodo = async () => {
     const todoResponse = await fetch(todoUrl + id);
-    if (todoResponse.status !== 500) {
+    if (todoResponse.status !== 200) {
       setHasError(true);
       return;
     }

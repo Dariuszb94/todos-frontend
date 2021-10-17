@@ -1,4 +1,3 @@
-import "./App.css";
 import TodoList from "./components/todoList";
 import { Route, Switch } from "react-router-dom";
 import EditTodo from "./components/edit/edit";

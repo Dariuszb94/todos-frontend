@@ -37,13 +37,11 @@ const TodoList = () => {
     const todoResponse = await fetch(todoUrl + id, {
       method: "DELETE",
     });
-
-    if (todoResponse.status == 500) {
+    if (todoResponse.status !== 200) {
       setHasError(true);
       return;
     } else window.location.reload(false);
   };
-
   return (
     <>
       {loading ? <Loading /> : null}

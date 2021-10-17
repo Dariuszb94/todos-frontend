@@ -10,11 +10,11 @@ The App lets you add, edit and delete todos.
 
 ## General info
 
-On init, a list of todos is fetched from http://localhost:8080/todos. If an error occured, error will be shown. If there is no todos, no todo will be shown.
+On init, a list of todos is fetched from http://localhost:8080/todos. If an error occured, an error will be shown. If there is no todos, no todo will be shown.
 
-After submitting todo, new todo will be displayed on the list below ("name" and "status"). There is option for delete or edit it, you can also delete all todos by clicking "Reset".
+After submitting a todo, new todo will be displayed on the list below ("name" and "status"). There is an option for a delete or an edit it, you can also delete all todos by clicking "Reset".
 
-Editing todo can be done after clicking "Edit", there is a possibility to change name and/or status of it. If no name is submitted, name will be unchanged.
+Editing a todo can be done after clicking "Edit", there is a possibility to change name and/or status of it. If no name is submitted, a name will be unchanged.
 
 ## Technologies
 

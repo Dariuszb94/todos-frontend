@@ -1,5 +1,6 @@
 import { screen, render } from "@testing-library/react";
-import TodoList, { todoUrl } from "./todoList";
+import TodoList from "./todoList";
+import { todoUrl } from "./consts";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { HashRouter as BrowserRouter } from "react-router-dom";

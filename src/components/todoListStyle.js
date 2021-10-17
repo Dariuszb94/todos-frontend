@@ -37,3 +37,8 @@ export const TodoContainer = styled.li`
   display: flex;
   justify-content: center;
 `;
+export const Error = styled.div`
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Submit, Input, DoneToggle, EditForm } from "./editStyle";
+import { StyledLink } from "../globalStyles";
 import { useHistory } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 const Edit = () => {
   const [todo, setTodo] = useState({});
   const [todoNew, setTodoNew] = useState({});
@@ -73,7 +73,7 @@ const Edit = () => {
         </DoneToggle>
         <Submit type="submit" value="Send" />
       </EditForm>
-      <NavLink to={{ pathname: `/` }}>Go back</NavLink>
+      <StyledLink to={{ pathname: `/` }}>Go back</StyledLink>
       {hasError ? "Error sending todo" : null}
     </div>
   );

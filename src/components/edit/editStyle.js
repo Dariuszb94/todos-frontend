@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const Submit = styled.input`
   pointer-events: ${(props) => (props.disable ? "none" : "unset")};
   background-color: white;
@@ -29,6 +30,7 @@ export const Input = styled.input`
 `;
 export const DoneToggle = styled.button`
   height: 33px;
+  margin: 12px 0;
   box-sizing: border-box;
   box-shadow: 0px 8px 12px rgb(0 0 0 / 10%);
   outline: none;

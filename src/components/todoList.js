@@ -9,8 +9,9 @@ import {
   Error,
   TodoName,
   Delete,
-  StyledLink,
 } from "./todoListStyle.js";
+import { StyledLink } from "./globalStyles";
+
 import { todoUrl } from "./consts";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty";

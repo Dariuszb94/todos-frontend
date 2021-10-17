@@ -59,7 +59,7 @@ const Edit = () => {
     setTodoNew(todo);
   };
   return (
-    <div>
+    <section>
       <EditForm
         onSubmit={() => {
           handleSubmit();
@@ -73,7 +73,7 @@ const Edit = () => {
       </EditForm>
       <StyledLink to={{ pathname: `/` }}>Go back</StyledLink>
       {hasError ? "Error sending todo" : null}
-    </div>
+    </section>
   );
 };
 

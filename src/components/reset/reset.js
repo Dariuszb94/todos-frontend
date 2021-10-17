@@ -20,7 +20,7 @@ const Reset = () => {
     } else window.location.reload(false);
   };
   return (
-    <div>
+    <section>
       <form
         onSubmit={() => {
           handleSubmit();
@@ -29,7 +29,7 @@ const Reset = () => {
         <ResetSubmit type="submit" value="Reset" />
       </form>
       {hasError ? "Error reseting todos" : null}
-    </div>
+    </section>
   );
 };
 

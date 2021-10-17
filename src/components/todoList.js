@@ -48,30 +48,32 @@ const TodoList = () => {
       {hasError ? <Error>An error has occured</Error> : null}
       <Add />
       <Reset />
-      <Todos>
-        {todos.length > 0
-          ? todos.map((todo) => {
-              return (
-                <TodoContainer key={todo.id}>
-                  <Todo onSubmit={() => deleteTodo(todo.id)}>
-                    <TodoName>{todo.name}</TodoName>
-                    <picture>
-                      {todo.completed ? (
-                        <CheckBoxIcon />
-                      ) : (
-                        <HourglassEmptyIcon />
-                      )}
-                    </picture>
-                    <Delete type="submit" value="Delete" />
-                  </Todo>
-                  <StyledLink to={{ pathname: `/edit/${todo.id}` }}>
-                    Edit
-                  </StyledLink>
-                </TodoContainer>
-              );
-            })
-          : null}
-      </Todos>
+      <section>
+        <Todos>
+          {todos.length > 0
+            ? todos.map((todo) => {
+                return (
+                  <TodoContainer key={todo.id}>
+                    <Todo onSubmit={() => deleteTodo(todo.id)}>
+                      <TodoName>{todo.name}</TodoName>
+                      <picture>
+                        {todo.completed ? (
+                          <CheckBoxIcon />
+                        ) : (
+                          <HourglassEmptyIcon />
+                        )}
+                      </picture>
+                      <Delete type="submit" value="Delete" />
+                    </Todo>
+                    <StyledLink to={{ pathname: `/edit/${todo.id}` }}>
+                      Edit
+                    </StyledLink>
+                  </TodoContainer>
+                );
+              })
+            : null}
+        </Todos>
+      </section>
     </>
   );
 };

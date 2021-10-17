@@ -33,7 +33,7 @@ const Add = () => {
     } else window.location.reload(false);
   };
   return (
-    <div>
+    <section>
       <form
         onSubmit={(e) => {
           handleSubmit(e);
@@ -41,10 +41,9 @@ const Add = () => {
       >
         <Input type="text" value={todo} onChange={handleChange} />
         <Submit type="submit" value="Send" disable={emptyTodo} />
-        {console.log(emptyTodo)}
       </form>
       {hasError ? "Error sending todo" : null}
-    </div>
+    </section>
   );
 };
 

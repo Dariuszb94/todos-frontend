@@ -69,7 +69,7 @@ const Edit = () => {
         <DoneToggle type="button" onClick={setDone} done={todoNew.completed}>
           {todoNew.completed ? "DONE" : "TODO"}
         </DoneToggle>
-        <Submit type="submit" value="Send" />
+        <Submit type="submit" value="Confirm" />
       </EditForm>
       <StyledLink to={{ pathname: `/` }}>Go back</StyledLink>
       {hasError ? "Error sending todo" : null}
